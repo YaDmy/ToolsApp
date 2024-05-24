@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--для доступа к GPS-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--чтобы возвращать приблизительные данные о местоположении-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--для доступа к датчику компаса -->
+    <uses-feature android:name="android.hardware.sensor.compass" />
+
+    <!--application - описание компонентов приложения, доступных в пакете: стили, значок и др-->
+
+    <!--allowBackup указывает, будет ли для приложения создаваться резервная копия-->
+    <!--android:supportsRtl указывает, могут ли использоваться различные RTL API - специальные API для работы с
+    правосторонней ориентацией текста (например, для таких языков как арабский или фарси)-->
+    <!--android:roundIcon устанавливает круглую иконку приложения.-->
+    <!-- говорит о минимальной версии API, которая будет использована для ресурсов-->
+
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/compass_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ToolsApp"
+        tools:targetApi="31">
+        <!--android:exported="false" /> activity может быть запущена только компонентами одного и того же приложения-->
+        <activity
+            android:name=".activity.ClockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RandomiserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CalculatorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activity.StopwatchActivity"
+            android:exported="false" />
+        <!--android:exported="true" /> activity может быть запущена компонентами других приложений-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <!--в элементе intent-filter определяется интент-фильтр. В нем элемент action значение
+            "android.intent.action.MAIN" представляет главную точку входа в
+            приложение. То есть MainActivity остается основной и запускается приложением по умолчанию.-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Элемент <meta-data> определяет пару "имя-значение" для элемента
+        дополнительных произвольных данных, которыми можно снабдить родительский компонент.
+        (Позволяет добавить дополнительные метаданные к компонентам приложения)-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDV2_xy58r15K6TskZy4KWMuhUDVq67jqM" />
+    </application>
+
+</manifest>

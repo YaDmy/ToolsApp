@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ToolsApp</string>
+    <string name="welcome">Welcome</string>
+    <string name="choose_tool">Выберите инструмент</string>
+    <string name="stopwatch">Секундомер</string>
+    <string name="compass">Компас</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="random">Рандомайзер</string>
+    <string name="clock">Часы</string>
+    <string name="map">Карта</string>
+</resources>

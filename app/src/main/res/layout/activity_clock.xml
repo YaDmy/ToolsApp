@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_clock"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jura"
+        android:text="@string/clock"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/clockTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="00:00:00"
+        android:textColor="@android:color/black"
+        android:textSize="60sp" />
+
+</RelativeLayout>
